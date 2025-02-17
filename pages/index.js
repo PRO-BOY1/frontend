@@ -20,38 +20,48 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-50">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <div className="flex justify-center mb-6">
+    <div className="flex items-center justify-center h-screen" style={{ backgroundColor: "#660000" }}>
+      <div className="bg-white p-8 rounded-lg shadow-md w-96 text-center">
+        {/* Logo */}
+        <div className="flex justify-center mb-4">
           <img
             src="https://images-ext-1.discordapp.net/external/rO3knJLynojcojljpUKxdUMowNuSpChxQ6O2PPQJUnI/%3Fsize%3D1024/https/cdn.discordapp.com/icons/1302529950611542068/fd87a9027055fdf22b179ea071c6c559.png?format=webp&quality=lossless&width=512&height=512"
             alt="Logo"
-            className="w-20 h-20 rounded-full"
+            className="w-16 h-16 rounded-full"
           />
         </div>
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
+
+        {/* Login Heading */}
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Login</h2>
+
+        {/* Error Message */}
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+
+        {/* Form */}
         <form onSubmit={handleLogin}>
+          {/* Email Field */}
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
             <input
               className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               type="email"
-              placeholder="Enter your email"
+              placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
+
+          {/* Password Field */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
             <input
               className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               type="password"
-              placeholder="Enter your password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+
+          {/* Login Button */}
           <button
             type="submit"
             className="w-full p-2 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition duration-200"
