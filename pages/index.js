@@ -20,8 +20,8 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
+    <div className="flex items-center justify-center h-screen bg-gray-50">
+      <div className="bg-white p-8 rounded-lg shadow-md w-96">
         <div className="flex justify-center mb-6">
           <img
             src="https://images-ext-1.discordapp.net/external/rO3knJLynojcojljpUKxdUMowNuSpChxQ6O2PPQJUnI/%3Fsize%3D1024/https/cdn.discordapp.com/icons/1302529950611542068/fd87a9027055fdf22b179ea071c6c559.png?format=webp&quality=lossless&width=512&height=512"
@@ -29,13 +29,13 @@ export default function Login() {
             className="w-20 h-20 rounded-full"
           />
         </div>
-        <h2 className="text-2xl font-bold text-center text-white mb-6">Login</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         <form onSubmit={handleLogin}>
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-300 mb-1">Email</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
             <input
-              className="w-full p-2 bg-gray-700 rounded text-white placeholder-gray-400"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               type="email"
               placeholder="Enter your email"
               value={email}
@@ -43,9 +43,9 @@ export default function Login() {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-300 mb-1">Password</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
             <input
-              className="w-full p-2 bg-gray-700 rounded text-white placeholder-gray-400"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               type="password"
               placeholder="Enter your password"
               value={password}
@@ -54,7 +54,7 @@ export default function Login() {
           </div>
           <button
             type="submit"
-            className="w-full p-2 bg-blue-600 rounded text-white font-semibold hover:bg-blue-700 transition duration-200"
+            className="w-full p-2 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition duration-200"
           >
             Login
           </button>
