@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-gray-900 text-white;
+/* Make sure the body and html fill the whole screen */
+html, body {
+  @apply h-full;
+}
+
+/* Remove default padding/margin */
+* {
+  @apply p-0 m-0 box-border;
 }
