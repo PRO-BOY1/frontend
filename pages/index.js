@@ -27,28 +27,28 @@ export default function Login() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-gray-800 p-8 rounded-lg shadow-lg w-96"
+        className="bg-[#2d2d2d] p-8 rounded-lg shadow-xl w-96 max-w-md"
       >
         {/* Logo */}
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-6">
           <img
             src="https://images-ext-1.discordapp.net/external/rO3knJLynojcojljpUKxdUMowNuSpChxQ6O2PPQJUnI/%3Fsize%3D1024/https/cdn.discordapp.com/icons/1302529950611542068/fd87a9027055fdf22b179ea071c6c559.png?format=webp&quality=lossless&width=512&height=512"
             alt="Logo"
-            className="w-20 h-20"
+            className="w-20 h-20 rounded-full"
           />
         </div>
 
         {/* Login Heading */}
-        <h2 className="text-white text-2xl font-bold text-center mb-6">Login</h2>
+        <h2 className="text-white text-3xl font-semibold text-center mb-4">Login</h2>
 
         {/* Error Message */}
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+        {error && <p className="text-red-500 text-center mb-4 text-sm">{error}</p>}
 
         {/* Form */}
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form onSubmit={handleLogin} className="space-y-6">
           {/* Email Field */}
-          <div className="flex items-center bg-gray-700 p-2 rounded">
-            <FaUser className="text-white mx-2" />
+          <div className="flex items-center bg-[#3a3a3a] p-3 rounded-lg focus-within:ring-2 focus-within:ring-blue-500">
+            <FaUser className="text-white mx-3" />
             <input
               type="email"
               placeholder="Email"
@@ -60,8 +60,8 @@ export default function Login() {
           </div>
 
           {/* Password Field */}
-          <div className="flex items-center bg-gray-700 p-2 rounded">
-            <FaLock className="text-white mx-2" />
+          <div className="flex items-center bg-[#3a3a3a] p-3 rounded-lg focus-within:ring-2 focus-within:ring-blue-500">
+            <FaLock className="text-white mx-3" />
             <input
               type="password"
               placeholder="Password"
@@ -75,7 +75,7 @@ export default function Login() {
           {/* Login Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300"
           >
             Login
           </button>
