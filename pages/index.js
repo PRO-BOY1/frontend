@@ -2,8 +2,11 @@ import Image from "next/image";
 
 export default function Login() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#660000]">
-      <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-96 text-center">
+   <div className="flex justify-center items-center min-h-screen bg-[#660000]">
+  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-96 text-center flex flex-col items-center">
+  </div>
+</div>
+
         {/* Logo */}
         <div className="flex justify-center mb-4">
           <Image src="/logo.png" width={100} height={100} alt="Logo" className="rounded-full" />
